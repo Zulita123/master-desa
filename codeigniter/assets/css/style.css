@@ -1,0 +1,121 @@
+*{margin:0px;padding: 0px;}
+body{
+	background: #ecf0f5;
+	font-family: segoe ui;
+}
+form{
+	margin:10px 20px;
+}
+form label{
+	color: #333;
+	font-family: segoe ui;
+	margin-left: 5px;
+	float: left;
+	size: 12px;
+}
+form .text{
+	width: 500px;
+	padding: 10px;
+	margin: 10px 5px;
+	border:1px solid #ddd;
+	border-radius: 2px;
+}
+form .text2{
+	width: 250px;
+	padding: 8px;
+	margin: 5px 10px;
+	margin-right: -5px; 
+	border:1px solid #ddd;
+	border-radius: 2px;
+}
+.header{
+	width: 100%;
+	height: 50px;
+	background: #3c8dbc;
+}
+.header h2{
+	color: #fff;
+	padding: 10px;
+	font-weight: normal;
+}
+.kotak-kiri{
+	width: 252px;
+	height: 850px;
+	background: black;
+	float: left;
+}
+.kotak-kiri ul{
+	list-style: none;
+}
+.kotak-kiri ul li a{
+	text-decoration: none;
+	color:#fff;
+	padding: 20px 20px;
+	display: block;
+}
+.kotak-kiri ul li a:hover{
+	color:#63a1ed;
+}
+.konten{
+	width: 1095px;
+	height: 850px;
+	background: #fff;
+	float:right;
+}
+.konten h2{
+	padding: 10px;
+}
+.footer{
+	width: 100%;
+	height: 25px;
+	background: #bcbcbc;
+	float: right;
+	text-align: center;
+	padding: 10px;
+}
+.tabel{
+	width: 97%;
+	border-collapse: collapse;
+	margin: 10px 16px;
+}
+.tabel tr th{
+	background-color: #222d32;
+	padding: 10px;
+	color: #fff;
+}
+.tabel tr td{
+	padding: 10px;
+	color: #333;
+	text-align: center;
+	font-family: segoe ui;
+}
+.btn{
+	padding: 8px 10px;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	text-decoration: none;
+	margin: 10px 16px;
+	margin-top: 20px;
+	float: left;
+	border: 0;
+}
+a.btn:hover{
+	background-color: #333;
+	transition-duration: 1s;
+}
+.btn.btn-biru{
+	background-color: #63a1ed;
+}
+.btn.btn-hijau{
+	background-color: #43bc6c;
+}
+.btn.btn-oren{
+	background-color: #fcac4b;
+}
+.btn.btn-disable{
+	background-color: #bfbfbf;
+}
+.btn.btn-merah{
+	background-color: #e74c3c;
+}

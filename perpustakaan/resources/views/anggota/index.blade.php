@@ -1,0 +1,61 @@
+@extends('template.template')
+@section('content')
+
+ <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- /.box -->
+
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">{{$page_titel}}</h3>
+              <a href="{{url(config('app.admin_path').'/anggota/add?return_url='.Request::url())}}" class="btn btn-primary btn-sm">
+              	<i class="fa fa-plus"></i> <span>Add</span>
+              </a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode Anggota</th>
+                  <th>Nama Anggota</th>
+                  <th>Alamat</th>
+                  <th>No . Telp</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                	@foreach($data as $row)
+                <tr>
+                  <td>{{$row->kode_anggota}}</td>
+                  <td>{{$row->nama}}</td>
+                  <td>{{$row->alamat}}</td>
+                  <td>{{$row->telp}}</td>
+                  <td>{{$row->jenis_kelamin}}</td>
+                  <td>
+                  	<a href="{{url(config('app.admin_path').'/anggota/edit/'.$row->id.'?return_url='.Request::url())}}" class="btn btn-warning btn-xs">
+                  		<i class="fa fa-edit"></i>
+                  	</a>
+                    <a href="{{url(config('app.admin_path').'/anggota/delete/'.$row->id.'?return_url='.Request::url())}}" onclick="return confirm('Apakah anda Yakin??')" class="btn btn-danger btn-xs">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                	@endforeach
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+
+@endsection

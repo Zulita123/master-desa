@@ -1,0 +1,42 @@
+function sts(){
+	plh=$("#status").val();
+	if(plh=="Sudah Menikah"){
+		$("#anak").show();
+		$("#nama_anak").show();
+	}else{
+		$("#anak").hide();
+		$("#nama_anak").hide();
+	}
+}
+function trot(){
+	$.ajax({
+		url:"content/cari_nip.php",
+		type:"POST",
+		dataType:"json",
+		data:{
+			nip:$("#nip").val()
+		},
+		success:function(hasil){
+			$("#nama").val(hasil.nama);
+			$("#status").val(hasil.status);
+			$("#nama_jabatan").val(hasil.nama_jabatan);
+			$("#gaji_pokok").val(hasil.gaji_pokok);
+			$("#tj_jabatan").val(hasil.tj_jabatan);
+			$("#golongan").val(hasil.golongan);
+			$("#tj_suami_istri").val(hasil.tj_suami_istri);
+			$("#tj_anak").val(hasil.tj_anak);
+			$("#jumlah_anak").val(hasil.jumlah_anak);
+			gjp=$("#gaji_pokok").val();
+			tjj=$("#tj_jabatan").val();
+			tjs=$("#tj_suami_istri").val();
+			tja=$("#tj_anak").val();
+			ank=$("#jumlah_anak").val();
+			hsil=parseInt(gjp)+parseInt(tjj)+parseInt(tjs)+parseInt(tja)*ank;
+			document.getElementById('pendapatan').value=hsil;
+			ptn=hsil*0.1;
+			document.getElementById('potongan').value=ptn;
+			gaji=hsil-ptn;
+			document.getElementById('gaji_bersih').value=gaji;
+		}
+	});
+}

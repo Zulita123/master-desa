@@ -1,0 +1,59 @@
+body{
+	background: #3c8dbc;
+	transition-duration: 1s;
+}
+.kotak-wadah{
+	width: 380px;
+	height: 250px;
+	margin: 50px auto;
+	margin-top: 20px;
+	background: #eee;
+	border-radius: 5px;
+	transition-duration: 1s;
+}
+.kotak-d-isi{
+	float: left;
+	margin-top: 35px;
+}
+.kotak-isi .kotak{
+	text-align: center;
+	width: 320px;
+	height: 50px;
+	font-size: 16px;
+	margin: 5px 30px;
+	border-radius: 2px;
+	border: 1px solid #bfbfbf;
+	color: #564f4f;
+	transition-duration: 1s;
+}
+.kotak-tombol input{
+	margin: 5px 30px;
+	width: 320px;
+	height: 50px;
+	border-radius: 2px;
+	border:0px #564f4f;
+	background: #3c8dbc;
+	color: #fff;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+.kotak-tombol input:hover{
+	background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+	-webkit-background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+	-moz-background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+	-o-background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+}
+.kotak-judul{
+	text-align: center;
+}
+.kotak-judul p{
+	margin: 5px;
+	margin-top: 150px;
+	color: #fff;
+	font-family: segoe ui;
+	font-size: 30px;
+}
+.kotak-tombol a{
+	text-decoration: none;
+	margin-top: 10px;
+}
